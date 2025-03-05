@@ -43,3 +43,26 @@ testEmails2.forEach(email => {
     console.log(`${email}: ${emailRegex2.test(email)}`);
 });
 
+
+//UC3
+
+const emailRegex3 = /^abc(\.\w+)?@bridgelabz\.co(\.\w+)?$/;
+
+let testEmails3 = [
+    "abc@bridgelabz.co",
+    "abc.xyz@bridgelabz.co",
+    "abc@bridgelabz.co.in",
+    "abc.xyz@bridgelabz.co.in",
+    "xyz@bridgelabz.co",
+    "abc@xyz.co",
+    "abc@bridgelabzcom",
+    "abc@bridgelabz.com",
+    "abc.xyz@bridgelabzco.in",
+    "abcxyz@bridgelabz.co"
+];
+
+testEmails3.forEach(email => {
+    console.log(`${email}: ${emailRegex3.test(email)}`);
+});
+
+
