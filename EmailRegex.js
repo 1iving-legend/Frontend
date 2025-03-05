@@ -65,4 +65,23 @@ testEmails3.forEach(email => {
     console.log(`${email}: ${emailRegex3.test(email)}`);
 });
 
+//UC4
+
+function isValidEmail(email) {
+    const regex = /^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@bridgelabz\.co\.in$/;
+    return regex.test(email);
+}
+
+console.log(isValidEmail("abc@bridgelabz.co.in"));       
+console.log(isValidEmail("abc.xyz@bridgelabz.co.in"));    
+console.log(isValidEmail("abc_xyz@bridgelabz.co.in"));    
+console.log(isValidEmail("abc-xyz@bridgelabz.co.in"));   
+console.log(isValidEmail("abc+xyz@bridgelabz.co.in"));   
+console.log(isValidEmail("abc.xyz-123@bridgelabz.co.in"));
+
+console.log(isValidEmail("abc#xyz@bridgelabz.co.in"));    
+console.log(isValidEmail("abc xyz@bridgelabz.co.in"));    
+console.log(isValidEmail("abc@xyz@bridgelabz.co.in"));    
+console.log(isValidEmail("abc..xyz@bridgelabz.co.in"));
+
 
