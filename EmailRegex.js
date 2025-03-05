@@ -22,8 +22,9 @@ testEmails.forEach(email => {
 
 
 //UC2
-
+console.log();
 console.log("UC2")
+console.log();
 
 const emailRegex2 = /^abc(\.\w+)?@bridgelabz\.co(\.\w+)?$/;
 
@@ -45,7 +46,9 @@ testEmails2.forEach(email => {
 
 
 //UC3
-
+console.log();
+console.log("UC3")
+console.log();
 const emailRegex3 = /^abc(\.\w+)?@bridgelabz\.co(\.\w+)?$/;
 
 let testEmails3 = [
@@ -66,7 +69,9 @@ testEmails3.forEach(email => {
 });
 
 //UC4
-
+console.log();
+console.log("UC4")
+console.log();
 function isValidEmail(email) {
     const regex = /^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@bridgelabz\.co\.in$/;
     return regex.test(email);
@@ -85,3 +90,31 @@ console.log(isValidEmail("abc@xyz@bridgelabz.co.in"));
 console.log(isValidEmail("abc..xyz@bridgelabz.co.in"));
 
 
+//UC5
+console.log();
+console.log("UC5")
+console.log();
+
+function isValid(email) {
+    const regex = /^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@bridgelabz\.co\.in([a-zA-Z]{2})?$/;
+    return regex.test(email);
+}
+
+console.log(isValid("abc@bridgelabz.co.in"));     
+console.log(isValid("abc.xyz@bridgelabz.co.in"));    
+console.log(isValid("abc_xyz@bridgelabz.co.in"));   
+console.log(isValid("abc-xyz@bridgelabz.co.in"));  
+console.log(isValid("abc+xyz@bridgelabz.co.in"));    
+console.log(isValid("abc.xyz-123@bridgelabz.co.in"));
+
+
+console.log(isValid("abc@bridgelabz.co.inus"));     
+console.log(isValid("abc.xyz@bridgelabz.co.indk"));  
+
+// Invalid cases
+console.log(isValid("abc#xyz@bridgelabz.co.in"));   
+console.log(isValid("abc xyz@bridgelabz.co.in"));  
+console.log(isValid("abc@xyz@bridgelabz.co.in"));    
+console.log(isValid("abc..xyz@bridgelabz.co.in"));   
+console.log(isValid("abc@bridgelabz.co.inabc"));     
+console.log(isValid("abc@bridgelabz.co.in1a"));     
